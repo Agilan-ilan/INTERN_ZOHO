@@ -9,28 +9,28 @@ package Abstraction;
  *
  * @author agilan
  */
-interface D   // Interface 1
+interface Question_Text   // Interface 1
 {
-	public abstract void text1();    // Abstract method
+	public abstract void text_Q();    // Abstract method
 }
 
 
-interface E   // Interface 2
+interface Statement_Text   // Interface 2
 {
-	public abstract void text2();   // Abstract method
+	public abstract void text_S();   // Abstract method
 }
 
 
-class F implements D,E   // Interface is implemented
+class Text implements Statement_Text,Question_Text   // Interface is implemented
 {
 
 	// Abstract methods are overridden
-	public void text1()  
+	public void text_Q()  
 	{
 		System.out.println("Hello");
 	}
 
-	public void text2()
+	public void text_S()
 	{
 		System.out.println("What's your name?");
 	}
@@ -40,8 +40,8 @@ class F implements D,E   // Interface is implemented
 public class Abstract {
     public static void main(String[] args)
 	{
-     	F obj = new F(); // Create a C object
-     	obj.text1();
-     	obj.text2();
+     	Text obj = new Text(); // Create a Text object
+     	obj.text_Q();
+     	obj.text_S();
 	}
 }
