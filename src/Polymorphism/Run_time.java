@@ -15,16 +15,20 @@ class Parent{
     System.out.println("Overridden Method");
    }
 }
-public class Run_time extends Parent{
+class Child extends Parent{
 
    public void myMethod(){
     System.out.println("Overriding Method");
    }
   
-   public static void main(String args[]){
+   
+}
+
+public class Run_time{
+    public static void main(String args[]){
        
     
-    Parent obj = new Run_time();
+    Parent obj = new Child();
     obj.myMethod();
     
    }
