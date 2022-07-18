@@ -11,29 +11,29 @@ package OOP.Multiple_inheritance;
  */
 
 interface Example{  
-void x();
-void y();  
-void z();  
-void o();  
+void Methodx();
+void Methody();  
+void Methodz();  
+void Methodo();  
 }  
   
 //Creating abstract class that provides the implementation of one method of A interface  
 abstract class Sample implements Example{  
-public void z(){System.out.println("Java is fun.");}  
+public void Methodz(){System.out.println("Java is fun.");}  
 }  
   
 class Demo extends Sample{  
-public void x(){System.out.println("X");}  
-public void y(){System.out.println("Y");}  
-public void o(){System.out.println("Z");}  
+public void Methodx(){System.out.println("X");}  
+public void Methody(){System.out.println("Y");}  
+public void Methodo(){System.out.println("Z");}  
 }  
   
 
 public class Abstract_class {  
 public static void main(String args[]){  
 Example x=new Demo();  
-x.x();  
-x.y();  
-x.z();  
-x.o();  
+x.Methodx();  
+x.Methody();  
+x.Methodz();  
+x.Methodo();  
 }} 
