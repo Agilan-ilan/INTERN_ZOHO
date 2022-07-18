@@ -10,7 +10,7 @@ package Multiple_inheritance;
  * @author agilan
  */
 
-interface A   //First interface
+interface Question_one   //First interface
 {
     default void text()
     {
@@ -18,7 +18,7 @@ interface A   //First interface
     }
 }
 
-interface B   //Second interface
+interface Question_two   //Second interface
 {
     default void text()
     {
@@ -26,13 +26,13 @@ interface B   //Second interface
     }
 }
 
-class C implements A,B
+class Questions implements Question_one,Question_two
 {
 
     public void text()   //Default method in interface is overriden
     {
-   		A.super.text();  //text() method from first interface is called
-   		B.super.text();  //text() method from second interface is called
+   		Question_one.super.text();  //text() method from first interface is called
+   		Question_two.super.text();  //text() method from second interface is called
     }
 }
 
@@ -40,7 +40,7 @@ class Super
 {
     public static void main(String args[])
 	{
-         C obj = new C();
+         Questions obj = new  Questions();
          obj.text();   
     }
 }

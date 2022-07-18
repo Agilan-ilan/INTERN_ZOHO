@@ -11,29 +11,33 @@ package Multiple_inheritance;
  */
 
 interface Example{  
-void Methodx();
-void Methody();  
-void Methodz();  
-void Methodo();  
+void Example_one();
+void Example_two();  
+void Example_three();  //to be defined by abstract class
+void Example_four();  
 }  
   
 //Creating abstract class that provides the implementation of one method of A interface  
 abstract class Sample implements Example{  
-public void Methodz(){System.out.println("Java is fun.");}  
+    @Override
+public void Example_three(){System.out.println("Defined by abstract class Example_three");}  
 }  
   
 class Demo extends Sample{  
-public void Methodx(){System.out.println("X");}  
-public void Methody(){System.out.println("Y");}  
-public void Methodo(){System.out.println("Z");}  
+@Override
+public void Example_one(){System.out.println("In Example_one");} 
+@Override
+public void Example_two(){System.out.println("In Example_two");}  
+@Override
+public void Example_four(){System.out.println("In Example_four");}  
 }  
   
 
 public class Abstract_class {  
 public static void main(String args[]){  
-Example x=new Demo();  
-x.Methodx();  
-x.Methody();  
-x.Methodz();  
-x.Methodo();  
+Example Ex=new Demo();  
+Ex.Example_one();  
+Ex.Example_two();  
+Ex.Example_three();  
+Ex.Example_four();  
 }} 

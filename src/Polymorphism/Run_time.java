@@ -20,9 +20,13 @@ public class Run_time extends Parent{
    public void myMethod(){
     System.out.println("Overriding Method");
    }
+  
    public static void main(String args[]){
+       
+    
     Parent obj = new Run_time();
     obj.myMethod();
+    
    }
 }
 
