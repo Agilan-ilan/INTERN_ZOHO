@@ -49,7 +49,11 @@ public class Sub_String {
     }
     long end1 = System.nanoTime();
     System.out.println("Elapsed Time in nano seconds: "+ (end1-start1));
-    System.out.println(p1+" "+p2);
+    
+    if(p1==-1 && p2==-1){
+        System.out.println("No sub-array found.");
+    }else
+    System.out.println(p1+"to"+p2);
     
     
     

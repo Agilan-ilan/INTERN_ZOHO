@@ -18,6 +18,8 @@ public class Sentence_making {
     
     static int L=16;
      static ArrayList<String> Finallist=new ArrayList<>();
+     static String Final="[\n";
+     static int Firstline;
     
     static void Make_Sentence(String[] input){
         Map<Integer, ArrayList<String>> listString = new HashMap ();
@@ -74,8 +76,9 @@ public class Sentence_making {
             }
             int freespace=L-length;
             concatinator(list.getValue(),freespace,wordcount);
-         
-        }
+        
+        } 
+        Final+="\n]";
     }
     
     
@@ -91,8 +94,15 @@ public class Sentence_making {
     static String appendRight(String list,int freespace,int key){
         
         for(int i=0;i<freespace;i++){
-            list+="+";
-        }if(key==1) Finallist.add(list);
+            list+=" ";
+        }if(key==1){
+           
+             if(Firstline==0){
+              Final+=list;
+              Firstline++;
+          }else
+          Final+=",\n"+list;
+        }
         return list;
     }
     
@@ -110,16 +120,21 @@ public class Sentence_making {
                     if(netspace>0){
                         for(int j=0;j<(freespace/netspace);j++){
                    
-                    temp+="/";
+                    temp+=" ";
                 }
                     }
-                temp+=">";
+                temp+=" ";
                 }
                 
               
              //   System.out.println(temp); 
             }
-          Finallist.add(temp);
+          if(Firstline==0){
+              Final+=temp;
+              Firstline++;
+          }else
+          Final+=",\n"+temp;
+
        
     }
     
@@ -132,13 +147,13 @@ public class Sentence_making {
          Make_Sentence(input1);
          
          
-         System.out.println("\n\n+ indicates filling not evenly divided space");
-         System.out.println("> indicates normal spaceing between words4");
-         System.out.println("/ indicates filling space for justifying around left and right\n\n");
-         System.out.println(Finallist);
-         Finallist.clear();
-         Make_Sentence(input2);
-         System.out.println(Finallist);
+         
+         System.out.println(Final);
+         
+         
+//         Final="[\n";Firstline=0;
+//         Make_Sentence(input2);
+//         System.out.println(Final);
     }
     
     

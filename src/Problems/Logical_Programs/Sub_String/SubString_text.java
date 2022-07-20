@@ -52,12 +52,12 @@ public class SubString_text {
       for (Map.Entry<Integer, String
              > me :
              map.entrySet()) {
-          System.out.println("Common String"+me.getValue());
+          System.out.println("Common String  : "+me.getValue());
       }
   }
     
     public static void main(String args[]){
-        SubString("However Everyday is a Day");
+        SubString("aBCD AbCH BCdCA TbCe");
     
     }
 }
