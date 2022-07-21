@@ -5,7 +5,6 @@
  */
 package SOLID_Principles.OpenClose.Implemented;
 
-import SOLID_Principles.OpenClose.Normal.*;
 import java.util.ArrayList;
 import java.util.List;
 
