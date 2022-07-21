@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Problems.Logical_Programs.Sub_String.Kth_Min_and_Max;
+package Problems.Logical_Programs.Kth_Min_and_Max;
 
 /**
  *

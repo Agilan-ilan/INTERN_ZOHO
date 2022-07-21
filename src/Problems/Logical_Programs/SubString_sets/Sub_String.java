@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Problems.Logical_Programs.Sub_String.SubString_sets;
+package Problems.Logical_Programs.SubString_sets;
 
 import java.util.Scanner;
 
